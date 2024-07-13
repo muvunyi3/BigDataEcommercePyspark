@@ -19,17 +19,20 @@ Ensure you have the following installed:
 ```bash
 git clone https://github.com/muvunyi3/BigDataEcommercePyspark
 cd BigDataEcommercePyspark
-
+```
 
 ### Step 2: Hadoop commands
+
+```bash
 start-all.sh
 jps
 hdfs dfs -mkdir /ecommerce
 hdfs dfs -ls /ecommerce
 hdfs dfs -put EcommerceCustomers.csv /ecommerce
-
+```
 
 ### Step 3: Hive
+```bash
 - install mysql
 - download Hive
 - configure hive-site.xml
@@ -38,3 +41,12 @@ hdfs dfs -put EcommerceCustomers.csv /ecommerce
 hive --service schematool -dbType mysql -initSchema 
 - start metastore
 hive --service metastore
+hive 
+- create database tradedb
+- create external table sessions
+- load data from hdfs project_files/2019-Nov.csv
+```
+### step 4 Py
+```bash
+- open ecommerce.ipynb in jyupter
+```
